@@ -26,8 +26,12 @@ def login():
         cursor = mysql.connection.cursor()
         cursor.execute(''' INSERT INTO tab1 VALUES(%s , %s)''',(no,name))
         mysql.connection.commit()
+        cursor.execute(''' SELECT * FROM tab1 ''')        
+        a = cursor.fetchall()
+
+            
         cursor.close()
-        return f"Done!!"
+        return f"Done!!\n {a}"
 
 if __name__=="__main__":
     app.run(debug=True)
