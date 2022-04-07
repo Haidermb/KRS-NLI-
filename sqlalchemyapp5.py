@@ -15,11 +15,19 @@ students = Table(
 )
 #meta.create_all(engine)
 
+# insert data into db
 conn.execute(students.insert(), [
    {'name':'Komal','lastname' : 'Bhandari'},
    {'name':'Abdul','lastname' : 'Sattar'},
-   {'name':'Priya','lastname' : 'Rajhans'},
+   {'name':'Priya','lastname' : 'Rajhans'},  
 ])
+
+#to print data from db
+s = students.select()
+conn = engine.connect()
+result = conn.execute(s)
+for row in result:
+   print (row)
 
 
 if __name__=="__main__":
