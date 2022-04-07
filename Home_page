@@ -7,10 +7,12 @@
     <title>Home</title>
 </head>
 <body>
-<form action = "/login" method="post">
-    <input type="number" name="number" id="number" placeholder="Enter user_id">
-    <input type="text" name="name" id="name" placeholder="Enter Name">
+<form action = "/h" method="post">
+    <input type="number" name="roomno" id="roomno" placeholder="Enter Room No">
+    <input type="text" name="bname" id="bname" placeholder="Enter Borrower Name">
+    <input type="text" name="rname" id="rname" placeholder="Enter Returner Name">
     <button type="submit">Save</button>
+    
 </form>
 </body>
 </html>
